@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="script.js"></script>
+    <link rel="icon" href="img/icons8-code-48.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="search-bar">
+          <span class="search-icon">
+            <i class="bx bx-search"></i>
+          </span>
+          <input type="search" name="search" id="search" placeholder="Search" />
+        </div>
+        <div class="nav-right-side">
+          <!-- <i class="bx bx-grid"></i> -->
+          <i class="bx bx-sun" id="theme-toggle"></i>
+          <i class="bx bx-bell"></i>
+          <img src="img/pogi.jpg" class="profile" alt="Profile" />
+        </div>
+      </header>
+
+      <nav class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu" id="hamburger"></i>
+          <img src="img/icons8-code-48.png" alt="Logo" />
+          <span class="logo-text"> Jem Sync </span>
+        </div>
+        <div class="menu-contents">
+          <ul class="menu-items">
+            <li class="item">
+              <div class="nav-link submenu-item">
+                <span class="navlink-icon">
+                  <i class="bx bx-home-alt"></i>
+                </span>
+                <a href="#" class="core-stack">Core Stack</a>
+              </div>
+              <ul class="menu-items submenu">
+                <li class="sub-item">
+                  <img src="img/icons8-html.svg" alt="HTML" />
+                  <a href="#">HTML</a>
+                </li>
+                <li class="sub-item">
+                  <img src="img/icons8-css.svg" alt="CSS" />
+                  <a href="#">CSS</a>
+                </li>
+                <li class="sub-item">
+                  <img src="img/icons8-javascript.svg" alt="JavaScript" />
+                  <a href="#">JavaScript</a>
+                </li>
+                <li class="sub-item">
+                  <img src="img/icons8-node-js.svg" alt="Node js" />
+                  <a href="#">Node.js</a>
+                </li>
+                <li class="sub-item">
+                  <img src="img/icons8-python.svg" alt="Python" />
+                  <a href="#">Python</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="nav-link submenu-item">
+                <span class="navlink-icon">
+                  <i class="bx bx-grid-alt"></i>
+                </span>
+                <a href="#" class="stack-title">Frameworks
+                  <i class="bx bx-chevron-down" style="color: #ffffff"></i>
+                </a>
+              </div>
+              <ul class="menu-items submenu hide">
+                <li class="sub-items">
+                  <i class="bx bxl-react" style="color: #61dbfb"></i>
+                  <a href="#">React</a>
+                </li>
+                <li class="sub-items">
+                  <img src="img/icons8-tailwindcss.svg" alt="Tailwind" />
+                  <a href="#">Tailwind</a>
+                </li>
+                <li class="sub-items">
+                  <i class="bx bxl-flask" style="color: #ffffff"></i>
+                  <a href="#">Flask</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <div class="nav-link submenu-item">
+                <span class="navlink-icon">
+                  <i class="bx bx-grid-alt"></i>
+                </span>
+                <a href="#" class="stack-title"
+                  >Other Tech Tools
+                  <i class="bx bx-chevron-down" style="color: #ffffff"></i>
+                </a>
+              </div>
+              <ul class="menu-items submenu hide">
+                <li class="sub-items">
+                  <img src="img/icons8-sass.svg" alt="SASS" />
+                  <span class="navlink">SASS</span>
+                </li>
+                <li class="sub-items mongo">
+                  <i class="bx bxl-mongodb" style="color: #05d23c"></i>
+                  <span class="navlink">MongoDB</span>
+                </li>
+                <li class="sub-items">
+                  <i class="bx bxl-git" style="color: #e04c1f"></i>
+                  <span class="navlink">Git</span>
+                </li>
+                <li class="sub-items">
+                  <img
+                    src="img/icons8-google-firebase-console.svg"
+                    alt="Firebase"
+                  />
+                  <span class="navlink">Firebase</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="settings">
+          <li class="settings-item">
+            <a href="#" class="settings-link">
+              <i class="bx bx-help-circle"></i>
+              <span>Help</span>
+            </a>
+          </li>
+          <li class="settings-item">
+            <a href="#" class="settings-link">
+              <i class="bx bx-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+      <article class="article">
+        <h1>Your Projects</h1>
+      </article>
+    </main>
+  </body>
+</html>
