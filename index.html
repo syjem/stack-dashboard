@@ -10,8 +10,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <title>Admin Dashboard</title>
+
+    <title>Stack Dashboard</title>
   </head>
+
   <body>
     <main class="container">
       <header class="header">
@@ -30,21 +32,20 @@
       </header>
 
       <nav class="sidebar">
-        <div class="logo">
+        <div class="logo-section">
           <i class="bx bx-menu" id="hamburger"></i>
           <img src="img/icons8-code-48.png" alt="Logo" />
           <span class="logo-text"> Jem Sync </span>
         </div>
+
         <div class="menu-contents">
           <ul class="menu-items">
             <li class="item">
-              <div class="nav-link submenu-item">
-                <span class="navlink-icon">
-                  <i class="bx bx-home-alt"></i>
-                </span>
-                <a href="#" class="core-stack">Core Stack</a>
+              <div class="nav-link">
+                <i class="bx bx-home-alt"></i>
+                <a href="#" class="stack-title">Core Stack</a>
               </div>
-              <ul class="menu-items submenu">
+              <ul class="sub-menu">
                 <li class="sub-item">
                   <img src="img/icons8-html.svg" alt="HTML" />
                   <a href="#">HTML</a>
@@ -67,70 +68,69 @@
                 </li>
               </ul>
             </li>
+
             <li class="item">
-              <div id="dropdown1" class="nav-link submenu-item">
-                <span class="navlink-icon">
-                  <i class="bx bx-grid-alt"></i>
-                </span>
-                <a href="#" class="stack-title"
-                  >Frameworks
+              <div class="nav-link" id="dropdown1">
+                <i class="bx bx-grid-alt"></i>
+                <a href="#" class="stack-title">
+                  Frameworks
                   <i
                     id="chevron1"
                     class="bx bx-chevron-down"
                     style="color: #ffffff"
-                  ></i>
+                  >
+                  </i>
                 </a>
               </div>
-              <ul id="drop-list1" class="menu-items submenu">
-                <li class="sub-items">
+              <ul id="drop-list1" class="sub-menu">
+                <li class="sub-item">
                   <i class="bx bxl-react" style="color: #61dbfb"></i>
                   <a href="#">React</a>
                 </li>
-                <li class="sub-items">
+                <li class="sub-item">
                   <img src="img/icons8-tailwindcss.svg" alt="Tailwind" />
                   <a href="#">Tailwind</a>
                 </li>
-                <li class="sub-items">
+                <li class="sub-item">
                   <i class="bx bxl-flask" style="color: #ffffff"></i>
                   <a href="#">Flask</a>
                 </li>
               </ul>
             </li>
+
             <li class="item">
-              <div id="dropdown2" class="nav-link submenu-item">
-                <span class="navlink-icon">
-                  <i class="bx bx-list-plus"></i>
-                </span>
+              <div class="nav-link" id="dropdown2">
+                <i class="bx bx-list-plus"></i>
                 <a href="#" class="stack-title">
                   Other Stacks
                   <i
                     id="chevron2"
                     class="bx bx-chevron-down"
                     style="color: #ffffff"
-                  ></i>
+                  >
+                  </i>
                 </a>
               </div>
-              <ul id="drop-list2" class="menu-items submenu hide">
-                <li class="sub-items">
+              <ul id="drop-list2" class="sub-menu hide">
+                <li class="sub-item">
                   <img src="img/icons8-sass.svg" alt="SASS" />
-                  <span class="other-stack">SASS</span>
+                  <a href="#">SASS</a>
                 </li>
-                <li class="sub-items mongo">
+                <li class="sub-item mongo">
                   <i class="bx bxl-mongodb" style="color: #05d23c"></i>
-                  <span class="other-stack">MongoDB</span>
+                  <a href="#">MongoDB</a>
                 </li>
-                <li class="sub-items">
+                <li class="sub-item">
                   <img
                     src="img/icons8-google-firebase-console.svg"
                     alt="Firebase"
                   />
-                  <span class="other-stack">Firebase</span>
+                  <a href="#">Firebase</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
-
         <ul class="settings">
           <li class="settings-item">
             <a href="#" class="settings-link">
