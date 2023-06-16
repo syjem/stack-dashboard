@@ -68,7 +68,7 @@ header.header .search-bar {
   display: flex;
   width: 50%;
   border: 0.125rem solid var(--clr-bg);
-  border-radius: 0.7rem;
+  border-radius: 1.1rem;
 }
 
 header.header .search-bar:focus-within {
@@ -80,8 +80,8 @@ header.header .search-bar input {
   border: none;
   width: 100%;
   padding: 0.7rem;
-  border-top-right-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.938rem;
+  border-bottom-right-radius: 0.938rem;
   background-color: aliceblue;
 }
 
@@ -89,8 +89,8 @@ header.header .search-bar i {
   color: var(--clr-bg);
   padding: 0.7rem 0 0.7rem 0.7rem;
   background-color: aliceblue;
-  border-top-left-radius: 0.6rem;
-  border-bottom-left-radius: 0.6rem;
+  border-top-left-radius: 0.938rem;
+  border-bottom-left-radius: 0.938rem;
 }
 
 header.header .nav-right-side {
