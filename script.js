@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Sidebar
+
   const dropdown1 = document.getElementById("dropdown1");
   const dropList1 = document.getElementById("drop-list1");
   const dropList2 = document.getElementById("drop-list2");
@@ -41,4 +43,29 @@ document.addEventListener("DOMContentLoaded", () => {
       ? hiddenClass(chevron2, dropdown2)
       : showClass(chevron2, dropdown2);
   });
+
+  // Image modal
+  const modal = document.querySelector(".img-modal");
+  const img = document.querySelector(".project-image");
+  const modalImage = document.getElementById("img1");
+  const caption = document.getElementById("caption");
+
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImage.src = img.src;
+    caption.textContent = img.alt;
+  });
+
+  const close = document.querySelector(".close");
+
+  close.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Article section - Cards
+  const articleContents = document.querySelector(".article-contents");
+
+  const card = (img, title, info) => {};
+
+  articleContents.append(card);
 });
