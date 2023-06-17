@@ -369,9 +369,9 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .article-contents {
   padding: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-template-rows: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .project-card {
@@ -379,6 +379,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   color: #051e34;
   box-shadow: 0 1px 3px 1px #8b8d8d;
   border-radius: 0.325rem;
+  margin: 0 auto;
 }
 
 .project-img-wrapper {
@@ -469,7 +470,6 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   text-align: center;
   color: #ccc;
   padding: 0.625rem 0;
-  height: 10rem;
 }
 
 .modal-content,
