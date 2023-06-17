@@ -48,6 +48,12 @@ h1 {
   margin: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
+
 main.container {
   max-width: 90rem;
   display: grid;
@@ -66,6 +72,10 @@ header.header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+header.header span.name {
+  cursor: pointer;
 }
 
 header.header span.name strong,
@@ -114,6 +124,7 @@ header.header .nav-right-side i {
   font-size: 1.2rem;
   color: var(--clr-bg);
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 header.header .nav-right-side #search-icon {
@@ -124,6 +135,7 @@ header.header .nav-right-side img.profile {
   width: 2.188rem;
   height: 2.188rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* ==== End ^ Header ==== */
@@ -145,7 +157,8 @@ nav.sidebar .logo-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.29rem;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 nav.sidebar .logo-section #hamburger {
@@ -339,7 +352,6 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .article-nav button {
   padding: 0.4rem 0.5rem;
   border-radius: 0.938rem;
-  border: none;
   width: 5rem;
   color: var(--clr-text);
   background-color: #06b6d4;
