@@ -1,6 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Sidebar
+  // Header Scroll
+  const header = document.querySelector(".header");
 
+  window.addEventListener("scroll", () => {
+    window.scrollY > 0
+      ? (header.style.boxShadow = "var(--box-shadow)")
+      : (header.style.boxShadow = "none");
+  });
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.querySelector("body");
+  const root = document.querySelector(":root");
+
+  const replaceClass = (replace, newClass) => {
+    themeToggle.classList.replace(replace, newClass);
+  };
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    body.classList.contains("dark")
+      ? replaceClass("bx-sun", "bx-moon")
+      : replaceClass("bx-moon", "bx-sun");
+
+    const setCustomProperty = (property, value) => {
+      root.style.setProperty(property, value);
+    };
+
+    themeToggle.classList.contains("bx-moon")
+      ? (setCustomProperty("--clr-light-text", "#fff"),
+        setCustomProperty("--clr-bg-body", "#0f172a"),
+        setCustomProperty("--box-shadow", "0 1px 3px 1px #020617"))
+      : (setCustomProperty("--clr-light-text", "#0f172a"),
+        setCustomProperty("--clr-bg-body", "#e7f2fd"),
+        setCustomProperty('--box-shadow', '0 1px 3px 1px #97a4b9'));
+  });
+
+  // Sidebar
   const dropdown1 = document.getElementById("dropdown1");
   const dropList1 = document.getElementById("drop-list1");
   const dropList2 = document.getElementById("drop-list2");
@@ -58,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Built with:</h3>
             <i class="bx bxl-react" style="color: #61dbfb"></i>
             <img src="img/icons8-tailwindcss.svg" alt="Tailwind" />
-            <i class="bx bxl-flask" style="color: #0e0e0e"></i>
+            <i class="bx bxl-flask" style="color: var(--clr-light-text)"></i>
           </div>       
         `;
 
