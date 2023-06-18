@@ -18,9 +18,9 @@ This is my solution to [The Odin Project Admin Dashboard](https://www.theodinpro
 
 ### Screenshots
 <br>
-<div style="display: flex; justify-content: center;">
+<p style="text-align: center">
   <img src="img/screenshots/mobile.png" alt="Mobile Screenshot" />
-</div>
+</p>
 <br>
 <div>
   <img src="img/screenshots/laptop.png" alt="Laptop Screenshot" />
