@@ -6,13 +6,16 @@
   --fw-reg: 400;
   --fw-bold: 700;
 
-  --clr-bg: #051e34;
-  --clr-bg-body: #fff;
+  --clr-light-text: #0f172a;
+  --clr-bg-side: #051e34;
+  --clr-bg-body: #e7f2fd;
   --clr-text: #ffffff;
   --clr-active: #db10e6;
   --clr-hover: #3c516b;
 
   --opacity-light: 0.8;
+
+  --box-shadow: 0px 1px 3px 0px #97a4b9;
 }
 
 *,
@@ -73,15 +76,23 @@ header.header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header.header span.name {
+header.header #hamburger {
+  display: none;
+}
+
+
+header.header span.header-nav {
   cursor: pointer;
 }
 
-header.header span.name strong,
-header.header span.name i {
-  color: var(--clr-bg);
+header.header span.header-nav strong,
+header.header span.header-nav i {
+  color: var(--clr-light-text);
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
 }
@@ -105,10 +116,11 @@ header.header .search-bar input {
   border-top-right-radius: 0.938rem;
   border-bottom-right-radius: 0.938rem;
   background-color: var(--clr-bg-body);
+  color: var(--clr-light-text);
 }
 
 header.header .search-bar i {
-  color: var(--clr-bg);
+  color: var(--clr-light-text);
   padding: 0.7rem 0 0.7rem 0.7rem;
   background-color: var(--clr-bg-body);
   border-top-left-radius: 0.938rem;
@@ -123,7 +135,7 @@ header.header .nav-right-side {
 
 header.header .nav-right-side i {
   font-size: 1.2rem;
-  color: var(--clr-bg);
+  color: var(--clr-light-text);
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -151,7 +163,7 @@ nav.sidebar {
   width: 16.25rem;
   height: 100vh;
   color: var(--clr-text);
-  background-color: var(--clr-bg);
+  background-color: var(--clr-bg-side);
 }
 
 nav.sidebar .logo-section {
@@ -160,10 +172,6 @@ nav.sidebar .logo-section {
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-}
-
-nav.sidebar .logo-section #hamburger {
-  display: none;
 }
 
 nav.sidebar .logo-section img {
@@ -334,11 +342,11 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 0px #0f766e;
+  box-shadow: 0px 2px 0px var(--clr-light-text);
 }
 
 .article h1 {
-  color: var(--clr-bg);
+  color: var(--clr-light-text);
   font-weight: var(--fw-bold);
   font-family: var(--ff-roboto);
   padding: 0.5rem;
@@ -360,7 +368,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 }
 
 .article-nav span a {
-  color: var(--clr-bg);
+  color: var(--clr-light-text);
   font-weight: var(--fw-bold);
   font-family: var(--ff-open-sans);
   font-size: 0.9rem;
@@ -375,9 +383,10 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 }
 
 .project-card {
+  color: var(--clr-light-text);
   max-width: 25rem;
   color: #051e34;
-  box-shadow: 0 1px 3px 1px #8b8d8d;
+  box-shadow: var(--box-shadow);
   border-radius: 0.325rem;
   margin: 0 auto;
   display: flex;
@@ -408,6 +417,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .project-card h2 {
   font-family: var(--ff-roboto);
   font-weight: var(--fw-bold);
+  color: var(--clr-light-text);
   padding: 1rem;
   font-size: 1.3rem;
 }
@@ -415,6 +425,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .project-card p {
   font-family: var(--ff-open-sans);
   font-weight: var(--fw-reg);
+  color: var(--clr-light-text);
   font-size: 0.9rem;
   margin: 0;
   padding: 0 1rem;
@@ -432,6 +443,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   font-family: var(--ff-open-sans);
   font-weight: var(--fw-bold);
   font-size: 0.9rem;
+  color: var(--clr-light-text);
 }
 
 .project-stacks i {
@@ -462,7 +474,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .img-modal {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 999;
   padding-top: 3rem;
   left: 0;
   top: 0;
@@ -522,6 +534,13 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.bx-dots-vertical-rounded {
+  color: var(--clr-light-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none !important;
+}
+
 @media only screen and (max-width: 45rem) {
   .modal-content {
     width: 100%;
@@ -530,5 +549,27 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   .close {
     right: 0.625rem;
     font-size: 2rem;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 59rem) {
+  header.header .search-bar {
+    display: none;
+  }
+
+  header.header .nav-right-side #search-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+
+  .article-nav button {
+    display: none;
+  }
+
+  .bx-dots-vertical-rounded {
+    display: block !important;
   }
 }
