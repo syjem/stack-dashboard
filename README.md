@@ -17,10 +17,15 @@ This is my solution to [The Odin Project Admin Dashboard](https://www.theodinpro
 - Live Site URL: [https://syjem.github.io/stack-dashboard/](https://syjem.github.io/stack-dashboard/)
 
 ### Screenshots
-<div style="display: flex; gap: 1.5rem">
-  <img src="img/screenshots/laptop.png" alt="Laptop Screenshot" />
+<br>
+<div style="display: flex; justify-content: center;">
   <img src="img/screenshots/mobile.png" alt="Mobile Screenshot" />
 </div>
+<br>
+<div>
+  <img src="img/screenshots/laptop.png" alt="Laptop Screenshot" />
+</div>
+<br>
 
 ## My Process
 
