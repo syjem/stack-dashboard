@@ -504,7 +504,6 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
   display: none;
   position: fixed;
   z-index: 999;
-  padding-top: 2.5rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -549,7 +548,7 @@ nav.sidebar .menu-contents::-webkit-scrollbar-thumb {
 .close {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: auto auto 0 auto;
   color: #f1f1f1;
   font-size: 2.5rem;
   font-weight: var(--fw-bold);

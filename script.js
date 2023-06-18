@@ -173,7 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   img.forEach((pic) => {
     pic.addEventListener("click", () => {
-      modal.style.display = "block";
+      modal.style.display = "flex";
+      modal.style.flexDirection = "column";
       modalImage.src = pic.src;
       caption.textContent = pic.alt;
     });
