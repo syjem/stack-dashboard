@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : (header.style.boxShadow = "none");
   });
 
+  // Toggle dark mode
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.querySelector("body");
   const root = document.querySelector(":root");
@@ -77,6 +78,24 @@ document.addEventListener("DOMContentLoaded", () => {
     dropList2.classList.contains("hide")
       ? hiddenClass(chevron2, dropdown2)
       : showClass(chevron2, dropdown2);
+  });
+
+  // Show and Close sidebar on mobile
+  const sidebar = document.querySelector('.sidebar');
+  const article = document.querySelector('.article');
+  const menu = document.getElementById('hamburger');
+  const closeSidebar = document.getElementById('sidebar-x');
+
+  menu.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+    header.classList.add('opacity-x');
+    article.classList.add('opacity-x');
+  });
+
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('show');
+    header.classList.remove('opacity-x');
+    article.classList.remove('opacity-x');
   });
 
   // Article section - Cards
