@@ -17,8 +17,13 @@ This is my solution to [The Odin Project Admin Dashboard](https://www.theodinpro
 - Live Site URL: [https://syjem.github.io/stack-dashboard/](https://syjem.github.io/stack-dashboard/)
 
 ### Screenshots
-![](img/screenshots/laptop.png)
-![](img/screenshots/mobile.png)
+<p align="center">
+  <img src="img/screenshots/mobile.png" alt="Mobile Screenshot" />
+</p>
+
+<p align="center">
+  <img src="img/screenshots/laptop.png" alt="Laptop Screenshot" />
+</p>
 
 ## My Process
 
