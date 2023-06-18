@@ -44,24 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
       : showClass(chevron2, dropdown2);
   });
 
-  // Image modal
-  const modal = document.querySelector(".img-modal");
-  const img = document.querySelector(".project-image");
-  const modalImage = document.getElementById("img1");
-  const caption = document.getElementById("caption");
-
-  img.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalImage.src = img.src;
-    caption.textContent = img.alt;
-  });
-
-  const close = document.querySelector(".close");
-
-  close.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
   // Article section - Cards
   const articleContents = document.querySelector(".article-contents");
 
@@ -76,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Built with:</h3>
             <i class="bx bxl-react" style="color: #61dbfb"></i>
             <img src="img/icons8-tailwindcss.svg" alt="Tailwind" />
+            <i class="bx bxl-flask" style="color: #0e0e0e"></i>
           </div>       
         `;
 
@@ -84,40 +67,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projects = [
     {
-      image: "<img src='img/projects/project-2.png' alt='Project Image' />",
-      title: "Portfolio Dashboard",
-      info: "Info about Project 2",
+      image:
+        "<img src='img/projects/project-1.jpg' alt='FinTrack' class='project-image' />",
+      title: "FinTrack",
+      info: "Financial tracker. Provides a user-friendly interface for monitoring and analyzing financial data in real-time.",
     },
     {
-      image: "<img src='img/projects/project-3.jpg' alt='Project Image' />",
-      title: "Housing Plan",
-      info: "Info about Project 3",
+      image:
+        "<img src='img/projects/project-2.png' alt='InvestMate' class='project-image' />",
+      title: "InvestMate",
+      info: "Serves as a comprehensive investment platform that enables users to invest in stocks and manage their portfolio in a seamless and user-friendly manner. ",
     },
     {
-      image: "<img src='img/projects/project-5.png' alt='Project Image' />",
-      title: "Development Software Manager",
-      info: "Info about Project 4",
+      image:
+        "<img src='img/projects/project-5.png' alt='DSM' class='project-image' />",
+      title: "DSM",
+      info: "Build beautiful products, faster. A professional design libraries for UI designers.",
     },
     {
-      image: "<img src='img/projects/project-6.png' alt='Project Image' />",
+      image:
+        "<img src='img/projects/project-3.jpg' alt='Foundation' class='project-image' />",
+      title: "Foundation",
+      info: "We'll build the house of your Dream. Provide's customers with the flexibility to choose from a range of house designs.",
+    },
+    {
+      image:
+        "<img src='img/projects/project-9.png' alt='SwiftTrace' class='project-image' />",
+      title: "SwiftTrace",
+      info: "Delivery tracker application allows users to monitor the progress and location of their packages as they are being delivered.",
+    },
+    {
+      image:
+        "<img src='img/projects/project-6.png' alt='Meta Spark' class='project-image' />",
       title: "Meta Spark",
-      info: "Info about Project 5",
-    },
-    {
-      image: "<img src='img/projects/project-7.png' alt='Project Image' />",
-      title: "Return of Investment Calculator",
-      info: "Info about Project 6",
-    },
-    {
-      image: "<img src='img/projects/project-9.png' alt='Project Image' />",
-      title: "Delivery Tracker",
-      info: "Info about Project 7",
+      info: "MetaSpark revolutionizes project management by empowering project managers with an AI assistant that automates administrative tasks.",
     },
   ];
 
   projects.forEach((project) => {
     const { image, title, info } = project;
     const projectCardElement = createCard(image, title, info);
-    articleContents.append(projectCardElement);
+    articleContents.appendChild(projectCardElement);
+  });
+
+  // Image modal
+  const modal = document.querySelector(".img-modal");
+  const img = document.querySelectorAll(".project-image");
+  const modalImage = document.getElementById("img1");
+  const caption = document.getElementById("caption");
+  const close = document.querySelector(".close");
+
+  img.forEach((pic) => {
+    pic.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImage.src = pic.src;
+      caption.textContent = pic.alt;
+    });
+  });
+
+  close.addEventListener("click", () => {
+    modal.style.display = "none";
   });
 });
