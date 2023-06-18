@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     themeToggle.classList.contains("bx-moon")
       ? (setCustomProperty("--clr-light-text", "#fff"),
-        setCustomProperty("--clr-bg-body", "#0f172a"),
+        setCustomProperty("--clr-bg-body", "#1a3247"),
         setCustomProperty("--box-shadow", "0 1px 3px 1px #020617"))
       : (setCustomProperty("--clr-light-text", "#0f172a"),
         setCustomProperty("--clr-bg-body", "#e7f2fd"),
